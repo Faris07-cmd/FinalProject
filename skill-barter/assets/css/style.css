@@ -66,6 +66,31 @@
     }
     .nav-btn:hover { background: var(--teal) !important; border-color: var(--dark) !important; }
 
+    @media (max-width: 700px) {
+
+    nav .container {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .nav-logo {
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+}
+
+
     /* ── Hero ── */
     #hero {
       padding: 80px 0 60px;
@@ -570,3 +595,85 @@
       .stat-item { border-right: none; padding: 10px 20px; }
       .form-row { grid-template-columns: 1fr; }
     }
+
+    /* after php */
+
+    .success-message {
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    text-align: center;
+}
+/* ── Dashboard / Request card grids ── */
+
+.dashboard-cards,
+.request-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.dashboard-cards .skill-card,
+.request-cards .skill-card {
+    width: 100%;
+    min-width: 0;
+}
+.dashboard-skills {
+    margin-top: 60px;
+}
+
+.dashboard-skills .section-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.skill-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.skill-actions .btn {
+    margin: 0;
+}
+
+
+/* ── Tablet ── */
+
+@media (max-width: 900px) {
+
+    .dashboard-cards,
+    .request-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ── Mobile ── */
+
+@media (max-width: 600px) {
+
+    .dashboard-cards,
+    .request-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skill-card .btn {
+    margin-top: 8px;
+    margin-right: 6px;
+}
+@media (max-width: 600px) {
+
+    .skill-card .btn {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
